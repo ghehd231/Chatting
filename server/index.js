@@ -51,6 +51,9 @@ const resolvers = {
         description,
       };
       chattingLog.push(newChat); //채팅로그가 배열이랑 push 로 저장
+      pubsub.publish(NEW_CHAT, {
+        newChat,
+      });
       return 'YES'; //YES 리턴 해줌
     },
   },
