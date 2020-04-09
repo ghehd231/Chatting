@@ -77,4 +77,8 @@ const server = new GraphQLServer({
 //   };
 // const server = new GraphQLServer({ typeDefs, resolvers, opts });
 
-server.start(() => console.log(`Graphql Server Running on ${server.options.port}`));
+server.start(() =>
+  console.log(
+    `Graphql Server Running on ${server.options.port} Endpoint : ${server.options.endpoint}`,
+  ),
+);
